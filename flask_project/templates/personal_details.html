@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Details</title>
+    <style>
+        h1{
+        color: green;
+        text-align: center;
+        }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 18px;
+        }
+        td, th
+        {
+            border: 1px solid #005bb5;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even)
+        {
+            background-color: #c0c0c0;
+        }
+    </style>
+
+</head>
+<body>
+<h1>Details About {{name }}</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Employee Name</th>
+        <th>Age</th>
+        <th>Roll</th>
+        <th>Salary</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for row in data%}
+    <tr>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+        <td>{{row[4]}}</td>
+        <td>{{row[5]}}</td>
+        <td>{{row[6]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
